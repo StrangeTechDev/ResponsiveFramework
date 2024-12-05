@@ -38,7 +38,7 @@ class MaxWidthBox extends StatelessWidget {
         child: Container(
           color: backgroundColor,
           padding: padding,
-          child: MediaQuery(
+          child: MediaQuery.removePadding(
             data: mediaQuery,
             removeBottom: true,
             removeLeft: true,
