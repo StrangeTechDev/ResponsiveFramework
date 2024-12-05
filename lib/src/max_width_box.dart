@@ -21,7 +21,7 @@ class MaxWidthBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
+    MediaQueryData mediaQuery = MediaQuery.of(context).removePadding(removeLeft: true, removeRight: true, removeTop: true, removeBottom: true);
 
     if (maxWidth != null) {
       if (mediaQuery.size.width > maxWidth!) {
@@ -38,12 +38,8 @@ class MaxWidthBox extends StatelessWidget {
         child: Container(
           color: backgroundColor,
           padding: padding,
-          child: MediaQuery.removePadding(
+          child: MediaQuery(
             data: mediaQuery,
-            removeBottom: true,
-            removeLeft: true,
-            removeRight: true,
-            removeTop: true,
             child: child,
           ),
         ),
