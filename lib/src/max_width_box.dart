@@ -21,7 +21,7 @@ class MaxWidthBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context).removePadding(removeLeft: true, removeRight: true, removeTop: true, removeBottom: true);
+    MediaQueryData mediaQuery = MediaQuery.of(context);
 
     if (maxWidth != null) {
       if (mediaQuery.size.width > maxWidth!) {
